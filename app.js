@@ -27,7 +27,7 @@ function verificarIntento(){
     let intentoDeUsuario = parseInt(document.getElementById('intentoDeUsuario').value);
     
     if(numeroSecreto==intentoDeUsuario){
-        asignarTextoElemento('p',`¡Congratulations! The secret number was ${numeroSecreto}. You guessed it in ${intentos} ${(intentos===1)? 'try:'tries'}`);
+        asignarTextoElemento('p',`¡Congratulations! The secret number was ${numeroSecreto}. You guessed it in ${intentos} ${(intentos===1)? 'try':'tries'}`);
         document.getElementById('reiniciar').removeAttribute('disabled');
     }else{
         if(intentoDeUsuario>numeroSecreto){
@@ -48,7 +48,7 @@ function limpiarCaja(){
 function iniciarJuego(){
     intentos = 1;
     asignarTextoElemento('h1',"Guess the secret number!");
-    asignarTextoElemento('p',`Your attempt (The number is located between 1 y ${numeroMaximo}):`);
+    asignarTextoElemento('p',`Your attempt (The number is between 1 and ${numeroMaximo}):`);
     numeroSecreto = generarNumeroSecreto();
     return;
 }

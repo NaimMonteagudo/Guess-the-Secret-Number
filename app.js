@@ -31,7 +31,7 @@ function verify(){
     }else{
         if(intentoDeUsuario>numeroSecreto){
             asignarTextoElemento('p',`Try again, the secret number is smaller.`);    
-        }else asignarTextoElemento('p',`Try gain, the secret number is bigger.`);   
+        }else asignarTextoElemento('p',`Try again, the secret number is bigger.`);   
         intentos++;
         limpiarCaja();
     }

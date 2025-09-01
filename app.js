@@ -23,9 +23,8 @@ function generarNumeroSecreto() {
     }       
 }
 
-function verificarIntento(){
+function verify(){
     let intentoDeUsuario = parseInt(document.getElementById('intentoDeUsuario').value);
-    
     if(numeroSecreto==intentoDeUsuario){
         asignarTextoElemento('p',`¡Congratulations! The secret number was ${numeroSecreto}. You guessed it in ${intentos} ${(intentos===1)? 'try':'tries'}`);
         document.getElementById('reiniciar').removeAttribute('disabled');
@@ -53,12 +52,10 @@ function iniciarJuego(){
     return;
 }
 
-function reiniciarJuego(){
+function resetGame(){
     limpiarCaja();
     iniciarJuego();
     document.querySelector('#reiniciar').setAttribute('disabled','true');
     return;
 }
 iniciarJuego();
-
-

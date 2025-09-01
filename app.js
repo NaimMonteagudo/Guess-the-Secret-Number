@@ -30,8 +30,8 @@ function verify(){
         document.getElementById('reiniciar').removeAttribute('disabled');
     }else{
         if(intentoDeUsuario>numeroSecreto){
-            asignarTextoElemento('p',`Try it once again, the secret number is smaller.`);    
-        }else asignarTextoElemento('p',`Try it once again, the secret number is bigger.`);   
+            asignarTextoElemento('p',`Try again, the secret number is smaller.`);    
+        }else asignarTextoElemento('p',`Try gain, the secret number is bigger.`);   
         intentos++;
         limpiarCaja();
     }
